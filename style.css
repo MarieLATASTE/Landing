@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Sacramento&display=swap');
+
+*{margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'New Rocker', cursive;
+    color: #404042;
+    font-size: 1.2rem;
+    width: 100vw;
+}
+h1, h2, h3{
+    font-family: 'Sacramento', cursive;
+  /* font-size: 2.5rem; */
+}
+h2{
+    text-align: center;
+}
+p{
+    color: #404042;
+    opacity: .7;
+}
+.banner{
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0,.7),rgba(0, 0, 0,.7)), url(https://cdn.pixabay.com/photo/2015/08/28/11/27/space-911785_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 75px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.girl1{
+    float: left;
+}
+.girl1 img, .girl3 img{
+    width: 250px;
+    transition: all .3s ease-in-out;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: #f0f8ff;
+}
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 100px;
+    background: #49f82a;
+    color: #290000;
+    border-radius: .5rem;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;right: 75%;
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+.girl3{
+    float: right;
+}
+.girl3:hover{
+    -webkit-box-shadow: inset 10px 3px 20px 15px #f4f4f8; 
+    box-shadow: inset 10px 3px 20px 15px #f4f4f8;
+    border-radius: .5rem;
+}
+.girl3 img:hover, .girl1 img:hover{
+    transform: scale(1.2);
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.banner h1{
+    color: #f0f8ff;
+    font-size: 3rem;
+    margin: .5rem;
+}
+.banner p{
+    color: #f0f8ff;
+    font-size: 1.5rem;
+}
+a{
+    color: #404042;
+    font-weight: bold;
+    font-family: 'New Rocker', cursive;
+    text-decoration: none;
+    transition: .3s ease;
+}
+a:hover{
+    color: #fec10b;
+}
+button{
+    background: #290000;
+    padding: 1rem ;
+    border-radius: .5rem;
+    display: inline-block;
+}
+button:hover{
+    color: #fed148;
+    background: #920808;
+    transform: scale(1.2);
+}
+.container{
+    width: 800px;
+    margin: auto;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+}
+.card-white{
+    background: #f4f4f8;
+    box-shadow: inset 0 0 1rem rgba(0, 0, 0,.7);
+    border-radius: .5rem;
+    width: 250px;
+    text-align: center;
+    padding: 1.5rem;
+    margin: .5rem;
+}
+.card-white:hover{
+    box-shadow: 0 0 1rem rgba(0, 0, 0,.7);
+}
+.card-white img{
+    width: 200px;height: 200px;
+    border-radius: .5rem;
+    border: 3px solid #404042;
+    transition: all .25s ease;
+}
+.card-white h3{
+    margin-bottom: 0;
+}
+.card-white img:hover{
+    transform: scale(1.1);
+}
+.card-white > p > span{
+    color: #000000;
+    font-weight: bold;
+}
+.footer {
+    background: #404042;
+ /*   text-align: center;*/
+    display: flex;
+    justify-content: space-around;
+  /*  padding: 24px 0; */
+}
+.footer > p {
+    color: #f0f8ff;
+    padding-top: 5rem;
+}
+.tooltip2 {
+    position: relative;
+    display: inline-block;
+    color: #f0f8ff;
+}
+  
+.tooltip2 .tooltiptext2 {
+    visibility: hidden;
+    width: 150px;
+    background: #49f82a;
+    color: #290000;
+    text-align: center;
+    border-radius: .5rem;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 20px;left: 75%;
+}
+  
+.tooltip2:hover .tooltiptext2 {
+    visibility: visible;
+}
+
+@media (max-width: 768px){
+    .banner, .footer{
+    width: 100%;
+    justify-content: space-around;
+    }
+
+    .girl1,.girl3{
+        display: none;
+    }
+    .container{
+        width: 100%;
+    }
+    .cards{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .card-white{
+        width: auto;
+    }
+    .card-white img{
+        width: 300px;height: 200px;
+    }
+    .footer > p{
+        font-size: 1rem;
+    }
+    .tooltip, .tooltip2{
+        display: none;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        width: 600px;
+    }
+}
+@media (min-width: 1000px){
+    .container{
+        width: 800px;
+    }
+    .cards{
+        justify-content: space-around;
+    }
+}
+
